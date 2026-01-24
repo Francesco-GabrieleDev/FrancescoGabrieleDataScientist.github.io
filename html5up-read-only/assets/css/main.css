@@ -2751,9 +2751,58 @@ input, select, textarea {
 			width: 50%;
 		}
 
-			.features article .inner > :last-child {
-				margin-bottom: 0;
-			}
+	.features article .inner > :last-child {
+		margin-bottom: 0;
+	}
+
+/* Skills grid overrides */
+
+.skills-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.25em;
+	margin-top: 2em;
+}
+
+.skill-card {
+	min-height: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+.skill-card .skill-list {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.75em;
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+
+.skill-card .skill-list li {
+	padding-left: 1.25em;
+	position: relative;
+}
+
+.skill-card .skill-list li::before {
+	content: '•';
+	position: absolute;
+	left: 0;
+	color: #4acaa8;
+}
+
+@media screen and (max-width: 980px) {
+	.skill-card .skill-list {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.skill-card .skill-list {
+		grid-template-columns: 1fr;
+	}
+}
 
 /* Header */
 
