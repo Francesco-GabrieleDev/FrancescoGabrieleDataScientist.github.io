@@ -2783,6 +2783,12 @@ input, select, textarea {
 	.skill-card .skill-list li {
 		padding-left: 1.25em;
 		position: relative;
+		line-height: 1.4em;
+		font-size: 0.95em;
+		background: none;
+		border: none;
+		box-shadow: none;
+		padding-right: 0;
 	}
 
 	.skill-card .skill-list li::before {
@@ -2790,6 +2796,8 @@ input, select, textarea {
 		position: absolute;
 		left: 0;
 		color: #4acaa8;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 
 	.skill-card .skill-list li.full-width {
@@ -2810,11 +2818,11 @@ input, select, textarea {
 
 /* Header */
 
-	#header {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
+		#header {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
 		-moz-flex-direction: column;
 		-webkit-flex-direction: column;
 		-ms-flex-direction: column;
@@ -2875,7 +2883,7 @@ input, select, textarea {
 			}
 
 		#header > header p {
-			color: #d2f2e9;
+			color: #ffffff;
 			font-style: italic;
 			margin: 1em 0 0 0;
 		}
@@ -2961,6 +2969,14 @@ input, select, textarea {
 	#wrapper {
 		background: #fff;
 		padding-right: 23em;
+	}
+
+	body.no-sidebar #header {
+		display: none;
+	}
+
+	body.no-sidebar #wrapper {
+		padding-right: 0;
 	}
 
 /* Main */
