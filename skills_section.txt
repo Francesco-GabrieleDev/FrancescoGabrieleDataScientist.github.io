@@ -1,0 +1,11 @@
+Data Preprocessing & Transformation: Dimensionality reduction (PCA, t-SNE, UMAP), Feature scaling, normalization, encoding categorical variables, Data cleaning, missing value imputation, Data augmentation (images, time series, tabular), Transformation pipelines (e.g., sklearn Pipeline)
+
+Unsupervised Learning: Clustering (K-Means, DBSCAN, hierarchical clustering), Embeddings, Anomaly / outlier detection
+
+Supervised Learning: Regression (linear, ridge/lasso, tree-based, neural networks), Classification (logistic regression, random forest, CNN, GNN), Ranking / Multi-label prediction
+
+Deep Learning & Representation Learning: Convolutional Neural Networks (CNNs), Graph Neural Networks (GNNs), Autoencoders, Embeddings
+
+Time Series & Forecasting: Short-term forecasting (ARIMA, Prophet, LSTM), Long-term prediction / trend analysis, Seasonal decomposition & anomaly detection, Load, demand, or energy production modeling
+
+Deployment & Production Tasks: Pipeline automation (Airflow, Prefect), Containerization (Docker), Model serialization & serving, Monitoring model performance / drift detection, Experiment tracking & reproducibility (MLFlow)
