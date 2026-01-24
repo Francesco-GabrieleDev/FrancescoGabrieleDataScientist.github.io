@@ -2796,8 +2796,7 @@ input, select, textarea {
 		position: absolute;
 		left: 0;
 		color: #4acaa8;
-		top: 50%;
-		transform: translateY(-50%);
+		top: 0.15em;
 	}
 
 	.skill-card .skill-list li.full-width {
