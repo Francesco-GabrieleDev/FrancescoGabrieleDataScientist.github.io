@@ -2767,10 +2767,27 @@ input, select, textarea {
 				margin: 0;
 			}
 
-			#header > header p {
-				color: #d2f2e9;
-				font-style: italic;
-				margin: 1em 0 0 0;
+		#header > header p {
+			color: #d2f2e9;
+			font-style: italic;
+			margin: 1em 0 0 0;
+		}
+
+		#header > header .header-extra {
+			font-style: normal;
+			margin-top: 1.5em;
+			text-align: right;
+		}
+
+			#header > header .header-extra p {
+				margin: 0;
+			}
+
+			#header > header .header-extra .button {
+				height: auto;
+				line-height: 1.5em;
+				padding: 0.5em 1em;
+				font-size: 0.9em;
 			}
 
 		#header > footer {
