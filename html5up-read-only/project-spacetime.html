@@ -55,25 +55,36 @@
 								</div>
 								<div class="container">
 									<header class="major">
-										<h2>Possibly Broke Spacetime</h2>
-										<p>A hands-on story about the experiment that warped the field and taught me more about uncertainty than any textbook.</p>
+										<h2>Optional Project Page Breakdown</h2>
+										<p>A structured outline that keeps the focus on the inference workflow while pairing the visual above with concise explanatory blocks.</p>
 									</header>
-									<p>
-									What started as a playful side project became a series of field tests across three continents. I built an array of synchronized sensors, then guided them through micro-second pulses until one of the pulses came back distorted. The vivid blue streaks from the readings inspired the suspicion that a localized frame had shifted, which turned out to be the moment I learned how resilient the math really is.
-									</p>
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<h4>The experiment</h4>
-											<p>
-											Two telescopes, a fiber optic cable loop, and a machine learning model that predicted jitter before it happened. We tracked the way light curved inside the pulse and compared it to simulations; when reality differed, we dove deeper.
-											</p>
-										</div>
-										<div class="col-6 col-12-medium">
-											<h4>Key takeaways</h4>
-											<p>
-											Precision is more than hardware—it is workflow. The work taught me how to build reliable data pipelines and to stay calm when the unexpected curveball arrives, trusting the team and the math that never lied.
-											</p>
-										</div>
+									<div class="project-breakdown">
+										<section>
+											<h3>Problem / Goal</h3>
+											<p>Automatically identify POI areas for mobility analysis so activity can be summed within well-defined boundaries.</p>
+										</section>
+										<section>
+											<h3>Input / Output</h3>
+											<p><strong>Input:</strong> Table of POI IDs with longitude/latitude.<br />
+											<strong>Output:</strong> Polygon geometries for each POI.</p>
+										</section>
+										<section>
+											<h3>Method</h3>
+											<ul>
+												<li>Retrieve imagery centered on each POI via API.</li>
+												<li>Map pixels to geographic coordinates.</li>
+												<li>Segment POI areas with YOLOv11.</li>
+												<li>Convert segmented pixels into polygons.</li>
+											</ul>
+										</section>
+										<section>
+											<h3>Result / Use</h3>
+											<p>Counted mobility pings within the polygons to measure activity for analysis or monitoring dashboards.</p>
+										</section>
+										<section>
+											<h3>Skills / Tools</h3>
+											<p>Python, YOLOv11, geo-mapping, API integration, spatial data processing.</p>
+										</section>
 									</div>
 									<ul class="actions">
 										<li><a href="index.html" class="button primary">Back to portfolio</a></li>
