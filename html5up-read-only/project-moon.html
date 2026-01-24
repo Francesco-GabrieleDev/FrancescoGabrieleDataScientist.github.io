@@ -55,43 +55,51 @@
 								</div>
 								<div class="container">
 									<header class="major">
-										<h2>Terraformed a Small Moon</h2>
-										<p>Designing habitability from scratch taught me how resilience and empathy go hand in hand with every line of code.</p>
+										<h2>POI Geometries Retrieval with Image Segmentation from Satellite Imagery</h2>
+										<p>Automated parcel extraction for spatial analytics.</p>
+										<p>Computer vision pipeline for point-of-interest geometry generation.</p>
 									</header>
-									<p>
-									The project began with a simple question: how do you adapt terrestrial ecosystems to a lunar environment? I led a cross-discipline team that built a predictive simulation, then progressively added data from real regolith and radiation experiments. Each iteration shaped a new capsule of documentation that could travel anywhere.
-									</p>
 									<div class="project-breakdown">
 										<section>
 											<h3>Problem / Goal</h3>
-											<p>Create a self-sustaining lunar habitat model that balances thermal management, dust mitigation, and crew well-being.</p>
+											<p>Accurate parcel geometries are foundational for spatial analytics, yet POI datasets often lack reliable polygon boundaries. This project automatically extracts high-quality polygon geometries for POIs directly from satellite imagery, reducing manual GIS effort and enabling scalable downstream analysis.</p>
 										</section>
 										<section>
 											<h3>Input / Output</h3>
-											<p><strong>Input:</strong> Regolith compaction, radiation measurements, greenhouse sensor streams.<br />
-											<strong>Output:</strong> Predictive simulation and operational guide for fixed-duration missions.</p>
+											<p><strong>Input</strong></p>
+											<ul>
+												<li>High-resolution satellite images centered on POI locations.</li>
+												<li>Bounding-box annotations for POI structures.</li>
+												<li>Predefined geographic coordinates for each site.</li>
+											</ul>
+											<p><strong>Output</strong></p>
+											<ul>
+												<li>Polygon geometries representing POI parcels.</li>
+												<li>Georeferenced spatial footprints for GIS workflows and mobility analysis.</li>
+											</ul>
 										</section>
 										<section>
 											<h3>Method</h3>
 											<ul>
-												<li>Couple thermal cycles, dust transport, and greenhouse controls inside a systems model.</li>
-												<li>Progressively inject field data from experiments to validate the simulations.</li>
-												<li>Build stakeholder dashboards that surface anomaly alerts.</li>
-												<li>Document workflows to preserve institutional knowledge for partner teams.</li>
+												<li>Collected and curated a dataset of satellite images covering diverse POI environments.</li>
+												<li>Fine-tuned a YOLOv11-based segmentation model to detect and segment POI parcels.</li>
+												<li>Optimized training with data augmentation for robustness across urban/rural contexts.</li>
+												<li>Post-processed segmentation masks into clean polygon geometries.</li>
+												<li>Manually reviewed and corrected edge cases to ensure full spatial coverage and accuracy.</li>
 											</ul>
 										</section>
 										<section>
 											<h3>Result / Use</h3>
-											<p>The model informed habitat design updates and became the basis for mission readiness briefings and automation scripts.</p>
+											<p>The model achieved reliable parcel segmentation across thousands of POIs, producing consistent, scalable geometry outputs. These polygons became the spatial foundation for downstream analyses (human activity aggregation, competition modeling, site performance studies), cutting manual GIS work while improving geometric consistency.</p>
 										</section>
 										<section>
 											<h3>Skills / Tools</h3>
-											<p>Systems modeling, Python, simulation pipelines, data storytelling, dashboarding.</p>
+											<p>Computer Vision · Image Segmentation · YOLOv11 · Satellite Imagery · Geospatial Data Processing · Python · Deep Learning · GIS Integration · Data Annotation · Model Evaluation.</p>
 										</section>
 									</div>
 									<ul class="actions">
-										<li><a href="index.html" class="button primary">Back to portfolio</a></li>
-										<li><a href="../Thesis.pdf" class="button" download>Download project PDF</a></li>
+										<li><a href="index.html" class="button">Back to portfolio</a></li>
+										<li><a href="../Thesis.pdf" class="button primary" download>Download technical PDF</a></li>
 									</ul>
 								</div>
 							</section>
