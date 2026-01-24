@@ -2780,17 +2780,21 @@ input, select, textarea {
 	margin: 0;
 }
 
-.skill-card .skill-list li {
-	padding-left: 1.25em;
-	position: relative;
-}
+	.skill-card .skill-list li {
+		padding-left: 1.25em;
+		position: relative;
+	}
 
-.skill-card .skill-list li::before {
-	content: '•';
-	position: absolute;
-	left: 0;
-	color: #4acaa8;
-}
+	.skill-card .skill-list li::before {
+		content: '•';
+		position: absolute;
+		left: 0;
+		color: #4acaa8;
+	}
+
+	.skill-card .skill-list li.full-width {
+		grid-column: 1 / -1;
+	}
 
 @media screen and (max-width: 980px) {
 	.skill-card .skill-list {
