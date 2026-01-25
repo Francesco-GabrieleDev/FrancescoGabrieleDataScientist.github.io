@@ -2745,14 +2745,28 @@ input, select, textarea {
 				object-fit: cover;
 			}
 
-		.features article .inner {
-			display: inline-block;
-			vertical-align: middle;
-			width: 50%;
-		}
+.features article .inner {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50%;
+}
 
 	.features article .inner > :last-child {
 		margin-bottom: 0;
+	}
+
+/* Project cards: image above text */
+	.stacked-projects .features article .image {
+		display: block;
+		width: 100%;
+		padding-right: 0;
+		margin-bottom: 1.5em;
+		height: 14em;
+	}
+
+	.stacked-projects .features article .inner {
+		display: block;
+		width: 100%;
 	}
 
 /* Skills grid overrides */
@@ -2802,6 +2816,10 @@ input, select, textarea {
 	.skill-card .skill-list li.full-width {
 		grid-column: 1 / -1;
 	}
+
+.compact-title {
+	margin-bottom: 0.35em;
+}
 
 @media screen and (max-width: 980px) {
 	.skill-card .skill-list {

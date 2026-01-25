@@ -79,7 +79,7 @@ I’m a Data Scientist with an energy engineering background and 2+ years of pro
 							</section>
 
 						<!-- Two -->
-							<section id="two">
+							<section id="two" class="stacked-projects">
 								<div class="container">
 									<h3>Projects & Relevant Work</h3>
 									<p>Independent projects, company assignments, and thesis work conducted in professional settings.</p>
@@ -98,7 +98,18 @@ I’m a Data Scientist with an energy engineering background and 2+ years of pro
 											<a href="project-moon.html" class="image"><img src="images/satellite_imagery.jpg" alt="" /></a>
 											<div class="inner">
 												<h4>POI Geometries Retrieval with Image Segmentation from Satellite Imagery</h4>
-												<p>Developed a framework to extract polygon geometries of points of interest from satellite images using YOLOv11. These geometries were then used to analyze human activity patterns within each area.</p>
+												<p><strong>Problem Addressed</strong><br />
+												Developed an automated framework to extract polygon geometries of points of interest from satellite imagery using a YOLOv11 segmentation model.</p>
+												<p><strong>Why It Matters</strong><br />
+												The extracted geometries enabled accurate measurement of human activity within each POI area.</p>
+												<p><strong>Model Performance</strong><br />
+												mAP@50–90: 0.67 · mAP@50: 0.98</p>
+												<p class="compact-title"><strong>Business Impact</strong></p>
+												<ul>
+													<li>Eliminated the need for third-party manual annotation, reducing operational costs.</li>
+													<li>Enabled large-scale geometry extraction (10k+ POIs processed in ~1 hour).</li>
+													<li>Learned compact POI representations reusable for downstream modeling tasks.</li>
+												</ul>
 												<ul class="actions">
 													<li><a href="project-moon.html" class="button primary">Click here</a></li>
 												</ul>
@@ -108,8 +119,22 @@ I’m a Data Scientist with an energy engineering background and 2+ years of pro
 											<a href="project-darkmatter.html" class="image"><img src="images/human_mobility.jpg" alt="" /></a>
 											<div class="inner">
 												<h4>Fine-Grained Mobility Prediction for Retail Demand using Graph Neural Networks</h4>
-												<p>Developed a graph-based mobility model to predict incoming human activity at individual gas station parcels using spatial and contextual features.
-The predicted mobility is used as a proxy for sales to support site-level performance and planning decisions.</p>
+												<p><strong>Problem Addressed</strong><br />
+												Classical gravity-based mobility models are effective at predicting flows between large geographic areas (e.g. counties or zones) but break down at finer resolutions. This project addresses that limitation by predicting incoming human mobility at the parcel level, specifically for individual gas station sites.</p>
+												<p><strong>Why It Matters</strong><br />
+												Human mobility pings recorded within station canopies show a ~0.7 correlation with actual sales, making mobility a strong proxy for demand. Being able to reliably predict this signal enables demand estimation even when direct sales data is unavailable.</p>
+												<p class="compact-title"><strong>Model Performance</strong></p>
+												<ul>
+													<li>Mean absolute error of ~28 pings per station.</li>
+													<li>Graph-based models outperformed non-graph baselines by explicitly modeling spatial context and local competition.</li>
+												</ul>
+												<p><em>(Metrics evaluated at station level across ~2.8k sites)</em></p>
+												<p class="compact-title"><strong>Business Impact</strong></p>
+												<ul>
+													<li>Established a framework for white-space analysis to support new site placement.</li>
+													<li>Enabled site-level demand estimation without direct access to sales labels.</li>
+													<li>Captured competitive spillovers and spatial dependencies missed by classical mobility models.</li>
+												</ul>
 												<ul class="actions">
 													<li><a href="project-darkmatter.html" class="button primary">Click here</a></li>
 												</ul>
