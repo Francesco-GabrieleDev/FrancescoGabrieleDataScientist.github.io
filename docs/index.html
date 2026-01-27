@@ -1,0 +1,610 @@
+<!DOCTYPE HTML>
+<!--
+	Read Only by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Francesco Gabriele Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<section id="header">
+					<header>
+						<span class="image avatar"><img src="images/fotocv.jpg" alt="" /></span>
+						<h1 id="logo"><a href="#">Francesco Gabriele</a></h1>
+					<p>
+					<strong>MSc in Data Science</strong><br />
+					Department of Mathematics<br />
+					University of Padua (Padova)
+					</p>
+
+					<p>
+					<strong>BSc in Energy Engineering</strong><br />
+					Department of Energy, Systems, Territory and Construction Engineering<br />
+					University of Pisa
+					</p>
+					<div class="header-extra">
+						<p>Currently working for <a href="https://locatium.ai" class="button small primary" target="_blank" rel="noreferrer">locatium.ai</a></p>
+					</div>
+					<p>
+					<strong>2+ years of working as a data scientist </strong>  <br />
+					</p>
+				</header>
+				<nav id="nav">
+					<ul>
+						<li><a href="#one" class="active">About</a></li>
+						<li><a href="#two">Projects</a></li>
+						<li><a href="#three">Skills and Tools</a></li>
+						<!-- <li><a href="#four">Contact</a></li> -->
+					</ul>
+				</nav>
+				<footer>
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+				</footer>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one">
+								<div class="image main" data-position="center">
+									<img src="images/eolic_web.jpg" alt="" />
+								</div>
+								<div class="container">
+									<header class="major">
+										<h2>Data Science and AI Solutions</h2>
+										<p></a></p>
+									</header>
+									<p>
+I’m a Data Scientist with an energy engineering background and 2+ years of professional experience in applied data science. I turn data into actionable insights to solve business problems, using statistical, machine learning, and deep learning methods on images, location, human mobility activity, and other types of data.
+</p>
+								</div>
+							</section>
+
+						<!-- Two -->
+							<section id="two" class="stacked-projects">
+								<div class="container">
+									<h3>Projects & Relevant Work</h3>
+									<p>Independent projects, company assignments, and thesis work conducted in professional settings.</p>
+									<div class="features">
+										<article>
+											<span class="image"><img src="images/pv_web.jpg" alt="" /></span>
+											<div class="inner">
+												<h4>5 kW Residential Rooftop PV System in Italy — Hourly Performance Simulation and KPIs</h4>
+												<p><strong>Project overview</strong><br />
+												Development of a compact, fully reproducible Python workflow to retrieve authoritative European solar resource data and perform a transparent, physics-based photovoltaic performance simulation.</p>
+												<p><strong>Data sources &amp; tools</strong></p>
+												<ul>
+													<li>PVGIS (JRC, European Commission): hourly irradiance and meteorological time series for selected Italian locations.</li>
+													<li>pvlib (Python): end-to-end PV system modelling, from plane-of-array irradiance to DC output, inverter conversion, and AC power.</li>
+												</ul>
+												<p class="compact-title"><strong>Methodology / workflow</strong></p>
+												<ul>
+													<li>Retrieve hourly PVGIS weather and irradiance data for a selected Italian site (default: Rome).</li>
+													<li>Define a representative residential PV system using pvlib component models.</li>
+													<li>Simulate hourly AC power output and aggregate results into energy indicators.</li>
+													<li>Generate a concise KPI table and diagnostic plots for model validation.</li>
+												</ul>
+												<p class="compact-title"><strong>Outputs (KPIs &amp; visualisations)</strong></p>
+												<ul>
+													<li>Monthly energy production (kWh).</li>
+													<li>Annual energy yield and capacity factor.</li>
+													<li>Diagnostic plots (e.g. representative daily power profiles, monthly energy totals, AC power distribution).</li>
+												</ul>
+												<p class="compact-title"><strong>Baseline assumptions</strong></p>
+												<ul>
+													<li>Location: Rome, Italy (easily configurable to any coordinates).</li>
+													<li>System configuration: 5 kW fixed-tilt rooftop system, 30° tilt, south-facing (azimuth 180°).</li>
+													<li>Losses: approximately 14% total system losses (inverter, wiring, soiling, and other balance-of-system effects).</li>
+												</ul>
+												<p><strong>Status</strong><br />
+												Results, source code, and data references will be published shortly.</p>
+
+											</div>
+										</article>
+										<article>
+											<span class="image"><img src="images/satellite_imagery.jpg" alt="" /></span>
+											<div class="inner">
+												<h4>POI Geometries Retrieval with Image Segmentation from Satellite Imagery</h4>
+												<p><strong>Problem Addressed</strong><br />
+												Developed an automated framework to extract polygon geometries of points of interest from satellite imagery using a YOLOv11 segmentation model.</p>
+												<p><strong>Why It Matters</strong><br />
+												The extracted geometries enabled accurate measurement of human activity within each POI area.</p>
+												<p><strong>Model Performance</strong><br />
+												mAP@50–90: 0.67 · mAP@50: 0.98</p>
+												<p class="compact-title"><strong>Business Impact</strong></p>
+												<ul>
+													<li>Eliminated the need for third-party manual annotation, reducing operational costs.</li>
+													<li>Enabled large-scale geometry extraction (10k+ POIs processed in ~1 hour).</li>
+													<li>Learned compact POI representations reusable for downstream modeling tasks.</li>
+												</ul>
+												<ul class="actions">
+													<li><a href="pdfs/POIsSegementation.pdf" class="button primary" download>Download technical PDF</a></li>
+												</ul>
+											</div>
+										</article>
+										<article>
+											<span class="image"><img src="images/human_mobility.jpg" alt="" /></span>
+											<div class="inner">
+												<h4>Fine-Grained Mobility Prediction for Retail Demand using Graph Neural Networks</h4>
+												<p><strong>Problem Addressed</strong><br />
+												Classical gravity-based mobility models are effective at predicting flows between large geographic areas (e.g. counties or zones) but break down at finer resolutions. This project addresses that limitation by predicting incoming human mobility at the parcel level, specifically for individual gas station sites.</p>
+												<p><strong>Why It Matters</strong><br />
+												Human mobility pings recorded within station canopies show a ~0.7 correlation with actual sales, making mobility a strong proxy for demand. Being able to reliably predict this signal enables demand estimation even when direct sales data is unavailable.</p>
+												<p class="compact-title"><strong>Model Performance</strong></p>
+												<ul>
+													<li>Mean absolute error of ~28 pings per station.</li>
+													<li>Graph-based models outperformed non-graph baselines by explicitly modeling spatial context and local competition.</li>
+												</ul>
+												<p><em>(Metrics evaluated at station level across ~2.8k sites)</em></p>
+												<p class="compact-title"><strong>Business Impact</strong></p>
+												<ul>
+													<li>Established a framework for white-space analysis to support new site placement.</li>
+													<li>Enabled site-level demand estimation without direct access to sales labels.</li>
+													<li>Captured competitive spillovers and spatial dependencies missed by classical mobility models.</li>
+												</ul>
+												<ul class="actions">
+													<li><a href="pdfs/GraphGravity.pdf" class="button primary" download>Download technical PDF</a></li>
+												</ul>
+											</div>
+										</article>
+									</div>
+								</div>
+							</section>
+
+						<!-- Three -->
+							<section id="three">
+								<div class="container">
+						<h3>Skills and Tools</h3>
+						<p>Organized into five focused areas so each discipline can get its own story and icon. Replace the sample bullets with your precise stack.</p>
+						<div class="skills-grid">
+							<article class="skill-card">
+								<i class="icon solid fa-toolbox" aria-hidden="true"></i>
+								<h4>Core Tools</h4>
+								<ul class="skill-list">
+									<li class="full-width">Python · PyTorch · scikit-learn · pandas · GeoPandas · NumPy · SQL · Git · Docker · Jupyter.</li>
+								</ul>
+							</article>
+							<article class="skill-card">
+								<i class="icon solid fa-project-diagram" aria-hidden="true"></i>
+								<h4>Modeling &amp; Analytical Methods</h4>
+								<ul class="skill-list">
+									<li><strong>Data Preprocessing &amp; Transformation:</strong> PCA, t-SNE, UMAP, scaling, normalization, encoding, data cleaning, imputation, augmentation, sklearn Pipeline.</li>
+									<li><strong>Unsupervised Learning:</strong> K-Means, DBSCAN, hierarchical clustering, embeddings, anomaly detection.</li>
+									<li><strong>Supervised Learning:</strong> Regression (linear, ridge/lasso, tree-based, neural nets), Classification (logistic, random forest, CNN, GNN), Ranking/multi-label.</li>
+									<li><strong>Deep Learning &amp; Representation Learning:</strong> CNNs, GNNs, autoencoders, embeddings.</li>
+									<li><strong>Time Series &amp; Forecasting:</strong> ARIMA, Prophet, LSTM, trend analysis, seasonal decomposition, anomaly detection, load/demand modeling.</li>
+								</ul>
+							</article>
+							<article class="skill-card">
+								<i class="icon solid fa-code-branch" aria-hidden="true"></i>
+								<h4>Production &amp; Software Engineering</h4>
+								<ul class="skill-list">
+									<li>Pipeline automation with Airflow.</li>
+									<li>Containerization with Docker.</li>
+									<li>Model serialization and serving.</li>
+									<li>Monitoring and drift detection for model performance.</li>
+									<li>Experiment tracking with MLflow.</li>
+									<li>Python library design, unit testing, and code reliability.</li>
+								</ul>
+							</article>
+							<article class="skill-card">
+								<i class="icon solid fa-database" aria-hidden="true"></i>
+								<h4>Data Engineering &amp; Processing</h4>
+								<ul class="skill-list">
+									<li>Data ingestion from APIs, databases, and files.</li>
+									<li>Feature engineering &amp; transformation.</li>
+									<li>Spatial joins &amp; raster/vector operations.</li>
+									<li>Data cleaning, validation, and augmentation.</li>
+									<li>Batch and incremental processing pipelines.</li>
+								</ul>
+							</article>
+							<article class="skill-card">
+								<i class="icon solid fa-chart-area" aria-hidden="true"></i>
+								<h4>Visualization &amp; Communication</h4>
+								<ul class="skill-list">
+									<li>Map-based analytics &amp; spatial visualization.</li>
+									<li>Dashboards &amp; business reporting.</li>
+									<li>Model evaluation visualizations (confusion matrices, ROC, etc.).</li>
+									<li>Storytelling with spatial and tabular data.</li>
+								</ul>
+							</article>
+						</div>
+					</div>
+				</section>
+
+						<!-- Four -->
+							<!--
+							<section id="four">
+								<div class="container">
+									<h3>Contact Me</h3>
+									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+									<form method="post" action="#">
+										<div class="row gtr-uniform">
+											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
+											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" class="primary" value="Send Message" /></li>
+													<li><input type="reset" value="Reset Form" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</div>
+							</section>
+							-->
+
+						<!-- Five -->
+						<!--
+							<section id="five">
+								<div class="container">
+									<h3>Elements</h3>
+
+									<section>
+										<h4>Text</h4>
+										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+										<hr />
+										<header>
+											<h4>Heading with a Subtitle</h4>
+											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+										</header>
+										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+										<header>
+											<h5>Heading with a Subtitle</h5>
+											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+										</header>
+										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+										<hr />
+										<h2>Heading Level 2</h2>
+										<h3>Heading Level 3</h3>
+										<h4>Heading Level 4</h4>
+										<h5>Heading Level 5</h5>
+										<h6>Heading Level 6</h6>
+										<hr />
+										<h5>Blockquote</h5>
+										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+										<h5>Preformatted</h5>
+										<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+									</section>
+
+									<section>
+										<h4>Lists</h4>
+										<div class="row">
+											<div class="col-6 col-12-xsmall">
+												<h5>Unordered</h5>
+												<ul>
+													<li>Dolor pulvinar etiam magna etiam.</li>
+													<li>Sagittis adipiscing lorem eleifend.</li>
+													<li>Felis enim feugiat dolore viverra.</li>
+												</ul>
+												<h5>Alternate</h5>
+												<ul class="alt">
+													<li>Dolor pulvinar etiam magna etiam.</li>
+													<li>Sagittis adipiscing lorem eleifend.</li>
+													<li>Felis enim feugiat dolore viverra.</li>
+												</ul>
+											</div>
+											<div class="col-6 col-12-xsmall">
+												<h5>Ordered</h5>
+												<ol>
+													<li>Dolor pulvinar etiam magna etiam.</li>
+													<li>Etiam vel felis at lorem sed viverra.</li>
+													<li>Felis enim feugiat dolore viverra.</li>
+													<li>Dolor pulvinar etiam magna etiam.</li>
+													<li>Etiam vel felis at lorem sed viverra.</li>
+													<li>Felis enim feugiat dolore viverra.</li>
+												</ol>
+												<h5>Icons</h5>
+												<ul class="icons">
+													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+													<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+													<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+												</ul>
+											</div>
+										</div>
+										<h5>Actions</h5>
+										<ul class="actions">
+											<li><a href="#" class="button primary">Default</a></li>
+											<li><a href="#" class="button">Default</a></li>
+											<li><a href="#" class="button alt">Default</a></li>
+										</ul>
+										<ul class="actions small">
+											<li><a href="#" class="button primary small">Small</a></li>
+											<li><a href="#" class="button small">Small</a></li>
+											<li><a href="#" class="button alt small">Small</a></li>
+										</ul>
+										<div class="row">
+											<div class="col-3 col-6-medium col-12-xsmall">
+												<ul class="actions stacked">
+													<li><a href="#" class="button primary">Default</a></li>
+													<li><a href="#" class="button">Default</a></li>
+													<li><a href="#" class="button alt">Default</a></li>
+												</ul>
+											</div>
+											<div class="col-3 col-6 col-12-xsmall">
+												<ul class="actions stacked">
+													<li><a href="#" class="button primary small">Small</a></li>
+													<li><a href="#" class="button small">Small</a></li>
+													<li><a href="#" class="button alt small">Small</a></li>
+												</ul>
+											</div>
+											<div class="col-3 col-6-medium col-12-xsmall">
+												<ul class="actions stacked">
+													<li><a href="#" class="button primary fit">Default</a></li>
+													<li><a href="#" class="button fit">Default</a></li>
+													<li><a href="#" class="button alt fit">Default</a></li>
+												</ul>
+											</div>
+											<div class="col-3 col-6-medium col-12-xsmall">
+												<ul class="actions stacked">
+													<li><a href="#" class="button primary small fit">Small</a></li>
+													<li><a href="#" class="button small fit">Small</a></li>
+													<li><a href="#" class="button alt small fit">Small</a></li>
+												</ul>
+											</div>
+										</div>
+									</section>
+
+									<section>
+										<h4>Table</h4>
+										<h5>Default</h5>
+										<div class="table-wrapper">
+											<table>
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>Description</th>
+														<th>Price</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Item One</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Two</td>
+														<td>Vis ac commodo adipiscing arcu aliquet.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Three</td>
+														<td> Morbi faucibus arcu accumsan lorem.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Four</td>
+														<td>Vitae integer tempus condimentum.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Five</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+												</tbody>
+												<tfoot>
+													<tr>
+														<td colspan="2"></td>
+														<td>100.00</td>
+													</tr>
+												</tfoot>
+											</table>
+										</div>
+
+										<h5>Alternate</h5>
+										<div class="table-wrapper">
+											<table class="alt">
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>Description</th>
+														<th>Price</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Item One</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Two</td>
+														<td>Vis ac commodo adipiscing arcu aliquet.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Three</td>
+														<td> Morbi faucibus arcu accumsan lorem.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Item Four</td>
+														<td>Vitae integer tempus condimentum.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Item Five</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+												</tbody>
+												<tfoot>
+													<tr>
+														<td colspan="2"></td>
+														<td>100.00</td>
+													</tr>
+												</tfoot>
+											</table>
+										</div>
+									</section>
+
+									<section>
+										<h4>Buttons</h4>
+										<ul class="actions">
+											<li><a href="#" class="button primary">Primary</a></li>
+											<li><a href="#" class="button">Default</a></li>
+											<li><a href="#" class="button alt">Alternate</a></li>
+										</ul>
+										<ul class="actions">
+											<li><a href="#" class="button primary large">Large</a></li>
+											<li><a href="#" class="button">Default</a></li>
+											<li><a href="#" class="button alt small">Small</a></li>
+										</ul>
+										<ul class="actions fit">
+											<li><a href="#" class="button primary fit">Fit</a></li>
+											<li><a href="#" class="button fit">Fit</a></li>
+											<li><a href="#" class="button alt fit">Fit</a></li>
+										</ul>
+										<ul class="actions fit small">
+											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
+											<li><a href="#" class="button fit small">Fit + Small</a></li>
+											<li><a href="#" class="button alt fit small">Fit + Small</a></li>
+										</ul>
+										<ul class="actions">
+											<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+											<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+											<li><a href="#" class="button alt icon solid fa-check">Icon</a></li>
+										</ul>
+										<ul class="actions">
+											<li><span class="button primary disabled">Primary</span></li>
+											<li><span class="button disabled">Default</span></li>
+											<li><span class="button alt disabled">Alternate</span></li>
+										</ul>
+									</section>
+
+									<section>
+										<h4>Form</h4>
+										<form method="post" action="#">
+											<div class="row gtr-uniform">
+												<div class="col-6 col-12-xsmall">
+													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+												</div>
+												<div class="col-6 col-12-xsmall">
+													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+												</div>
+												<div class="col-12">
+													<select name="demo-category" id="demo-category">
+														<option value="">- Category -</option>
+														<option value="1">Manufacturing</option>
+														<option value="1">Shipping</option>
+														<option value="1">Administration</option>
+														<option value="1">Human Resources</option>
+													</select>
+												</div>
+												<div class="col-4 col-12-medium">
+													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+													<label for="demo-priority-low">Low Priority</label>
+												</div>
+												<div class="col-4 col-12-medium">
+													<input type="radio" id="demo-priority-normal" name="demo-priority">
+													<label for="demo-priority-normal">Normal Priority</label>
+												</div>
+												<div class="col-4 col-12-medium">
+													<input type="radio" id="demo-priority-high" name="demo-priority">
+													<label for="demo-priority-high">High Priority</label>
+												</div>
+												<div class="col-6 col-12-medium">
+													<input type="checkbox" id="demo-copy" name="demo-copy">
+													<label for="demo-copy">Email me a copy of this message</label>
+												</div>
+												<div class="col-6 col-12-medium">
+													<input type="checkbox" id="demo-human" name="demo-human" checked>
+													<label for="demo-human">I am a human and not a robot</label>
+												</div>
+												<div class="col-12">
+													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+												</div>
+												<div class="col-12">
+													<ul class="actions">
+														<li><input type="submit" value="Send Message" /></li>
+														<li><input type="reset" value="Reset" class="alt" /></li>
+													</ul>
+												</div>
+											</div>
+										</form>
+									</section>
+
+									<section>
+										<h4>Image</h4>
+										<h5>Fit</h5>
+										<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
+										<div class="box alt">
+											<div class="row gtr-50 gtr-uniform">
+												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+											</div>
+										</div>
+										<h5>Left &amp; Right</h5>
+										<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+										<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+									</section>
+
+								</div>
+							</section>
+						-->
+
+					</div>
+
+				<!-- Footer -->
+					<section id="footer">
+						<div class="container">
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,2 +1,0 @@
-HERO SECTION:
-I’m a Data Scientist with an energy engineering background. I turn data into actionable insights to solve business problems, using statistical, machine learning, and deep learning methods on images, location, human mobility activity, and other types of data.
