@@ -42,7 +42,6 @@
 						<li><a href="#two">Projects</a></li>
 						<li><a href="#three">Skills and Tools</a></li>
 						<!-- <li><a href="#four">Contact</a></li> -->
-						<li><a href="files/Francesco_Gabriele_Resume.pdf" class="button primary" download>Download resume</a></li>
 					</ul>
 				</nav>
 				<footer>
@@ -87,11 +86,36 @@ I’m a Data Scientist with an energy engineering background and 2+ years of pro
 										<article>
 											<span class="image"><img src="images/pv_web.jpg" alt="" /></span>
 											<div class="inner">
-												<h4>Possibly broke spacetime</h4>
-												<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer adipiscing ornare amet.</p>
-												<ul class="actions">
-													<li><a href="../Thesis.pdf" class="button primary" download>Download technical PDF</a></li>
+												<h4>5 kW Residential Rooftop PV System in Italy — Hourly Performance Simulation and KPIs</h4>
+												<p><strong>Project overview</strong><br />
+												Development of a compact, fully reproducible Python workflow to retrieve authoritative European solar resource data and perform a transparent, physics-based photovoltaic performance simulation.</p>
+												<p><strong>Data sources &amp; tools</strong></p>
+												<ul>
+													<li>PVGIS (JRC, European Commission): hourly irradiance and meteorological time series for selected Italian locations.</li>
+													<li>pvlib (Python): end-to-end PV system modelling, from plane-of-array irradiance to DC output, inverter conversion, and AC power.</li>
 												</ul>
+												<p class="compact-title"><strong>Methodology / workflow</strong></p>
+												<ul>
+													<li>Retrieve hourly PVGIS weather and irradiance data for a selected Italian site (default: Rome).</li>
+													<li>Define a representative residential PV system using pvlib component models.</li>
+													<li>Simulate hourly AC power output and aggregate results into energy indicators.</li>
+													<li>Generate a concise KPI table and diagnostic plots for model validation.</li>
+												</ul>
+												<p class="compact-title"><strong>Outputs (KPIs &amp; visualisations)</strong></p>
+												<ul>
+													<li>Monthly energy production (kWh).</li>
+													<li>Annual energy yield and capacity factor.</li>
+													<li>Diagnostic plots (e.g. representative daily power profiles, monthly energy totals, AC power distribution).</li>
+												</ul>
+												<p class="compact-title"><strong>Baseline assumptions</strong></p>
+												<ul>
+													<li>Location: Rome, Italy (easily configurable to any coordinates).</li>
+													<li>System configuration: 5 kW fixed-tilt rooftop system, 30° tilt, south-facing (azimuth 180°).</li>
+													<li>Losses: approximately 14% total system losses (inverter, wiring, soiling, and other balance-of-system effects).</li>
+												</ul>
+												<p><strong>Status</strong><br />
+												Results, source code, and data references will be published shortly.</p>
+
 											</div>
 										</article>
 										<article>
@@ -172,12 +196,12 @@ I’m a Data Scientist with an energy engineering background and 2+ years of pro
 								<i class="icon solid fa-code-branch" aria-hidden="true"></i>
 								<h4>Production &amp; Software Engineering</h4>
 								<ul class="skill-list">
-									<li><strong>Pipeline automation:</strong> Airflow, Prefect.</li>
+									<li>Pipeline automation with Airflow.</li>
 									<li>Containerization with Docker.</li>
-									<li>Model serialization &amp; serving.</li>
-									<li><strong>Monitoring &amp; drift detection:</strong> model performance.</li>
-									<li><strong>Experiment tracking:</strong> MLflow.</li>
-									<li>Python library design, unit testing, code reliability.</li>
+									<li>Model serialization and serving.</li>
+									<li>Monitoring and drift detection for model performance.</li>
+									<li>Experiment tracking with MLflow.</li>
+									<li>Python library design, unit testing, and code reliability.</li>
 								</ul>
 							</article>
 							<article class="skill-card">
