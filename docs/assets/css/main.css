@@ -138,6 +138,7 @@ input, select, textarea {
 		font-weight: 700;
 		line-height: 1em;
 		margin: 0 0 0.5625em 0;
+		text-align: center;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -3491,3 +3492,128 @@ input, select, textarea {
 			}
 
 	}
+
+/* Top header overrides */
+
+#header {
+	background: #4acaa8;
+	color: #d2f2e9;
+	position: sticky !important;
+	right: auto !important;
+	top: 0 !important;
+	width: 100% !important;
+	height: auto !important;
+	overflow: visible !important;
+	text-align: center !important;
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: stretch !important;
+	justify-content: flex-start !important;
+	padding: 0.75em 2.5em !important;
+	z-index: 10000 !important;
+	box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.15);
+	-moz-transform: none !important;
+	-webkit-transform: none !important;
+	-ms-transform: none !important;
+	transform: none !important;
+}
+
+#header > nav {
+	order: 1;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-bottom: 0;
+}
+
+#header > nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.75em;
+}
+
+#header > nav ul li {
+	border-top: 0;
+}
+
+#header > nav ul li a {
+	color: #ffffff !important;
+	padding: 0.4em 0.75em;
+	border-radius: 999px;
+}
+
+#header > nav ul li a.active {
+	background: #ffffff;
+	color: #4acaa8 !important;
+}
+
+#wrapper {
+	padding-right: 0 !important;
+	padding-top: 0 !important;
+	padding-left: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+#titleBar {
+	display: none !important;
+}
+
+body.header-visible #wrapper,
+body.header-visible #titleBar,
+body.header-visible #header {
+	-moz-transform: none !important;
+	-webkit-transform: none !important;
+	-ms-transform: none !important;
+	transform: none !important;
+}
+
+@media screen and (max-width: 900px) {
+	#header {
+		padding: 0.75em 1.25em !important;
+	}
+}
+
+/* About intro block */
+
+.about-intro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 0.75em;
+	margin: 1.5em 0 2em 0;
+}
+
+.about-intro .image.avatar {
+	width: 7em;
+	height: 7em;
+}
+
+.about-intro .image.avatar img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.about-intro .header-extra {
+	margin-top: 0.25em;
+}
+
+/* About headline: keep on one line on wider screens */
+
+#one header.major h2 {
+	font-size: clamp(2em, 3.2vw, 3.2em);
+	white-space: nowrap;
+	text-align: center;
+}
+
+#one header.major {
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+	#one header.major h2 {
+		white-space: normal;
+	}
+}
