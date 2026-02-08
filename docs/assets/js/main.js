@@ -142,15 +142,20 @@
 		// 		visibleClass: 'header-visible'
 		// 	});
 
+	// Fixed header spacing.
+		var updateHeaderOffset = function() {
+			var h = $header.outerHeight() || 0;
+			document.documentElement.style.setProperty('--header-offset', h + 'px');
+		};
+
+		$window.on('load resize', updateHeaderOffset);
+
 	// Scrolly.
 		$('.scrolly').scrolly({
 			speed: 1000,
 			offset: function() {
 
-				if (breakpoints.active('<=medium'))
-					return $titleBar.height();
-
-				return 0;
+				return $header.outerHeight() || 0;
 
 			}
 		});
