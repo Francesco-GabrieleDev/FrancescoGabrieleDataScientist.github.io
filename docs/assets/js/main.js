@@ -121,27 +121,26 @@
 
 				});
 
-		// Title Bar.
-			$titleBar = $(
-				'<div id="titleBar">' +
-					'<a href="#header" class="toggle"></a>' +
-					'<span class="title">' + $('#logo').html() + '</span>' +
-				'</div>'
-			)
-				.appendTo($body);
+	// Title Bar + Panel disabled to keep the top menu always visible (desktop + mobile).
+		// $titleBar = $(
+		// 	'<div id="titleBar">' +
+		// 		'<a href="#header" class="toggle"></a>' +
+		// 		'<span class="title">' + $('#logo').html() + '</span>' +
+		// 	'</div>'
+		// )
+		// 	.appendTo($body);
 
-		// Panel.
-			$header
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'right',
-					target: $body,
-					visibleClass: 'header-visible'
-				});
+		// $header
+		// 	.panel({
+		// 		delay: 500,
+		// 		hideOnClick: true,
+		// 		hideOnSwipe: true,
+		// 		resetScroll: true,
+		// 		resetForms: true,
+		// 		side: 'right',
+		// 		target: $body,
+		// 		visibleClass: 'header-visible'
+		// 	});
 
 	// Scrolly.
 		$('.scrolly').scrolly({
