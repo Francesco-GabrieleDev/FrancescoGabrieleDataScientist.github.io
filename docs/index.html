@@ -80,35 +80,15 @@ I’m a Data Scientist with an energy engineering background and 2+ years of pro
 										<article>
 											<span class="image"><img src="images/pv_web.jpg" alt="" /></span>
 											<div class="inner">
-												<h4>5 kW Residential Rooftop PV System in Italy — Hourly Performance Simulation and KPIs</h4>
-												<p><strong>Project overview</strong><br />
-												Development of a compact, fully reproducible Python workflow to retrieve authoritative European solar resource data and perform a transparent, physics-based photovoltaic performance simulation.</p>
-												<p><strong>Data sources &amp; tools</strong></p>
-												<ul>
-													<li>PVGIS (JRC, European Commission): hourly irradiance and meteorological time series for selected Italian locations.</li>
-													<li>pvlib (Python): end-to-end PV system modelling, from plane-of-array irradiance to DC output, inverter conversion, and AC power.</li>
-												</ul>
-												<p class="compact-title"><strong>Methodology / workflow</strong></p>
-												<ul>
-													<li>Retrieve hourly PVGIS weather and irradiance data for a selected Italian site (default: Rome).</li>
-													<li>Define a representative residential PV system using pvlib component models.</li>
-													<li>Simulate hourly AC power output and aggregate results into energy indicators.</li>
-													<li>Generate a concise KPI table and diagnostic plots for model validation.</li>
-												</ul>
-												<p class="compact-title"><strong>Outputs (KPIs &amp; visualisations)</strong></p>
-												<ul>
-													<li>Monthly energy production (kWh).</li>
-													<li>Annual energy yield and capacity factor.</li>
-													<li>Diagnostic plots (e.g. representative daily power profiles, monthly energy totals, AC power distribution).</li>
-												</ul>
-												<p class="compact-title"><strong>Baseline assumptions</strong></p>
-												<ul>
-													<li>Location: Rome, Italy (easily configurable to any coordinates).</li>
-													<li>System configuration: 5 kW fixed-tilt rooftop system, 30° tilt, south-facing (azimuth 180°).</li>
-													<li>Losses: approximately 14% total system losses (inverter, wiring, soiling, and other balance-of-system effects).</li>
-												</ul>
-												<p><strong>Status</strong><br />
-												Results, source code, and data references will be published shortly.</p>
+												<h4>Map-Based Renewable Energy Simulation Platform (in development)</h4>
+												<p><strong>Problem Addressed</strong><br />
+												Energy feasibility and performance analyses for photovoltaic and wind assets are often detached from spatial context and require technical expertise.</p>
+												<p><strong>Solution</strong><br />
+												Developing a map-centric web platform that allows users to place, configure, and simulate PV systems and wind turbines directly on an interactive map, with asset-level dashboards generated automatically from backend simulations.</p>
+												<p><strong>Why It Matters</strong><br />
+												Enables no-code, spatially explicit exploration of renewable energy scenarios, improving interpretability and decision-making at both single-asset and territorial scale.</p>
+												<p><strong>Programming Tools</strong><br />
+												Python (geospatial stack, pvlib, wind turbine models), React, Leaflet, PostgreSQL/PostGIS, Docker.</p>
 
 											</div>
 										</article>
