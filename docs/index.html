@@ -269,7 +269,20 @@
 			background: rgba(17, 17, 17, 0.8);
 			transform: scale(1.05);
 		}
+		.section-separator {
+			position: relative;
+			height: 260px;
+			margin: 30px 0 50px;
+		}
+		.section-separator svg {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
 		#main > section#three {
+			border-top: 0;
+		}
+		#main > section#articles {
 			border-top: 0;
 		}
 		#main > section#three > .container {
@@ -356,14 +369,14 @@ I’m a Data Scientist with an energy engineering background and 2+ years of pro
 									<p class="proj-hero-desc">From renewable energy simulations to geospatial mobility models and computer vision — each project combines domain knowledge with modern ML methods.</p>
 								</div>
 								<div class="proj-nav-row">
-									<div class="proj-ni active" data-cat="renewable">
-										<div class="proj-ni-title">Renewable Energy</div>
-									</div>
-									<div class="proj-ni" data-cat="geospatial">
+									<div class="proj-ni active" data-cat="geospatial">
 										<div class="proj-ni-title">Geospatial</div>
 									</div>
 									<div class="proj-ni" data-cat="ai">
 										<div class="proj-ni-title">AI</div>
+									</div>
+									<div class="proj-ni" data-cat="renewable">
+										<div class="proj-ni-title">Renewable Energy</div>
 									</div>
 								</div>
 							</div>
@@ -371,38 +384,8 @@ I’m a Data Scientist with an energy engineering background and 2+ years of pro
 							<!-- White content panels -->
 							<div class="proj-panels-area">
 
-								<!-- Renewable Energy -->
-								<div class="proj-panel active" data-cat="renewable">
-									<div class="pp-header">
-										<div class="pp-eyebrow">Domain 01 — Renewable Energy</div>
-										<h3 class="pp-title">Map-Based Renewable<br>Energy Platform</h3>
-										<p class="pp-body">A spatially-aware simulation platform for PV and wind feasibility analysis — no coding required.</p>
-									</div>
-									<div class="features">
-										<article>
-											<span class="image"><img src="images/pv_web.jpg" alt="Renewable energy simulation platform" /></span>
-											<div class="inner centered">
-												<h4>Map-Based Renewable Energy Simulation Platform (in development)</h4>
-												<p><strong>Problem Addressed</strong><br />
-												Energy feasibility and performance analyses for photovoltaic and wind assets are often detached from spatial context and require technical expertise.</p>
-												<p><strong>Solution</strong><br />
-												Developing a map-centric web platform that allows users to place, configure, and simulate PV systems and wind turbines directly on an interactive map, with asset-level dashboards generated automatically from backend simulations.</p>
-												<p><strong>Why It Matters</strong><br />
-												Enables no-code, spatially explicit exploration of renewable energy scenarios, improving interpretability and decision-making at both single-asset and territorial scale.</p>
-												<p><strong>Programming Tools</strong><br />
-												Python (geospatial stack, pvlib, wind turbine models), React, Leaflet, PostgreSQL/PostGIS, Docker.</p>											<div style="margin-top: 2em;">
-												<p style="color: #000; font-weight: 600; margin-bottom: 1em;">Explore the remaining domains</p>
-												<ul class="actions" style="justify-content: center;">
-													<li><a href="#" class="button" onclick="document.querySelector('#two').scrollIntoView({behavior: 'smooth'}); document.querySelector('.proj-ni[data-cat=&quot;geospatial&quot;]').click(); return false;">Geospatial</a></li>
-													<li><a href="#" class="button" onclick="document.querySelector('#two').scrollIntoView({behavior: 'smooth'}); document.querySelector('.proj-ni[data-cat=&quot;ai&quot;]').click(); return false;">AI</a></li>
-												</ul>
-											</div>											</div>
-										</article>
-									</div>
-								</div>
-
 								<!-- Geospatial -->
-								<div class="proj-panel" data-cat="geospatial">
+								<div class="proj-panel active" data-cat="geospatial">
 									<div class="pp-header">
 										<div class="pp-eyebrow">Domain 02 — Geospatial</div>
 										<h3 class="pp-title">Fine-Grained Mobility<br>Prediction with GNNs</h3>
@@ -529,8 +512,53 @@ I’m a Data Scientist with an energy engineering background and 2+ years of pro
 									</div>
 								</div>
 
+								<!-- Renewable Energy -->
+								<div class="proj-panel" data-cat="renewable">
+									<div class="pp-header">
+										<div class="pp-eyebrow">Domain 01 — Renewable Energy</div>
+										<h3 class="pp-title">Map-Based Renewable<br>Energy Platform</h3>
+										<p class="pp-body">A spatially-aware simulation platform for PV and wind feasibility analysis — no coding required.</p>
+									</div>
+									<div class="features">
+										<article>
+											<span class="image"><img src="images/pv_web.jpg" alt="Renewable energy simulation platform" /></span>
+											<div class="inner centered">
+												<h4>Map-Based Renewable Energy Simulation Platform (in development)</h4>
+												<p><strong>Problem Addressed</strong><br />
+												Energy feasibility and performance analyses for photovoltaic and wind assets are often detached from spatial context and require technical expertise.</p>
+												<p><strong>Solution</strong><br />
+												Developing a map-centric web platform that allows users to place, configure, and simulate PV systems and wind turbines directly on an interactive map, with asset-level dashboards generated automatically from backend simulations.</p>
+												<p><strong>Why It Matters</strong><br />
+												Enables no-code, spatially explicit exploration of renewable energy scenarios, improving interpretability and decision-making at both single-asset and territorial scale.</p>
+												<p><strong>Programming Tools</strong><br />
+												Python (geospatial stack, pvlib, wind turbine models), React, Leaflet, PostgreSQL/PostGIS, Docker.</p>
+												<div style="margin-top: 2em;">
+													<p style="color: #000; font-weight: 600; margin-bottom: 1em;">Explore the remaining domains</p>
+													<ul class="actions" style="justify-content: center;">
+														<li><a href="#" class="button" onclick="document.querySelector('#two').scrollIntoView({behavior: 'smooth'}); document.querySelector('.proj-ni[data-cat=&quot;geospatial&quot;]').click(); return false;">Geospatial</a></li>
+														<li><a href="#" class="button" onclick="document.querySelector('#two').scrollIntoView({behavior: 'smooth'}); document.querySelector('.proj-ni[data-cat=&quot;ai&quot;]').click(); return false;">AI</a></li>
+													</ul>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+
 							</div><!-- /.proj-panels-area -->
 						</section>
+
+						<div class="section-separator" aria-hidden="true">
+							<svg viewBox="0 0 1200 260" preserveAspectRatio="none">
+								<g fill="none" stroke="#4acaa8" stroke-width="2" opacity="0.7">
+									<path d="M-20,40 C140,10 260,90 420,60 C580,30 700,90 860,60 C1020,30 1100,10 1220,40" />
+									<path d="M-20,70 C140,40 260,120 420,90 C580,60 700,120 860,90 C1020,60 1100,40 1220,70" />
+									<path d="M-20,100 C140,70 260,150 420,120 C580,90 700,150 860,120 C1020,90 1100,70 1220,100" />
+									<path d="M-20,130 C140,100 260,180 420,150 C580,120 700,180 860,150 C1020,120 1100,100 1220,130" />
+									<path d="M-20,160 C140,130 260,210 420,180 C580,150 700,210 860,180 C1020,150 1100,130 1220,160" />
+									<path d="M-20,190 C140,160 260,240 420,210 C580,180 700,240 860,210 C1020,180 1100,160 1220,190" />
+								</g>
+							</svg>
+						</div>
 
 						<!-- Articles -->
 						<section id="articles">
