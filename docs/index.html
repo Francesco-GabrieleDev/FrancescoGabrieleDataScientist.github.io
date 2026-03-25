@@ -312,6 +312,37 @@
 			padding-top: 2.5em;
 		}
 
+		/* Project quick-nav index */
+		.proj-index {
+			padding: 18px 60px 12px;
+			border-bottom: 1px solid rgba(0,0,0,0.07);
+			background: #fff;
+		}
+		.proj-index-label {
+			font-family: inherit;
+			font-size: 14px;
+			font-weight: 600;
+			letter-spacing: 0;
+			text-transform: none;
+			color: #111;
+			margin: 0 0 6px 0;
+		}
+		.proj-index-list {
+			margin: 0 0 6px 0;
+			padding-left: 20px;
+		}
+		.proj-index-list li {
+			margin: 0 0 6px 0;
+		}
+		.proj-index-link {
+			color: #111;
+			text-decoration: none;
+		}
+		.proj-index-link:hover {
+			color: #4acaa8;
+			text-decoration: underline;
+		}
+
 		@media (max-width: 736px) {
 			.proj-dark { padding: 48px 0 0; }
 			.proj-nav-row { grid-template-columns: 1fr; }
@@ -319,6 +350,7 @@
 			.proj-ni.active { border-left-color: #4acaa8; border-top-color: transparent; }
 			.pp-header { padding: 36px 24px 28px; }
 			.proj-panel .features { padding: 28px 24px; }
+			.proj-index { padding: 16px 24px 12px; }
 		}
 	</style>
 	</head>
@@ -647,7 +679,7 @@ I’m a Data Scientist with an energy engineering background and 2+ years of pro
 											</svg>
 										</div>
 										<article>
-											<h4 class="proj-title">Map-Based Renewable Energy Simulation Platform (in development)</h4>
+											<h4 class="proj-title">Map-Based Renewable Energy Simulation Platform</h4>
 											<span class="image"><img src="images/reex_energy/wind_farm_2.jpg" alt="Renewable energy simulation platform" /></span>
 											<div class="inner centered">
 												<p class="compact-title"><strong>Business Impact</strong></p>
@@ -945,7 +977,7 @@ I’m a Data Scientist with an energy engineering background and 2+ years of pro
 									</div>
 									<div class="features">
 										<article>
-											<h4 class="proj-title">Map-Based Renewable Energy Simulation Platform (in development)</h4>
+											<h4 class="proj-title">Map-Based Renewable Energy Simulation Platform</h4>
 											<span class="image"><img src="images/reex_energy/wind_farm_2.jpg" alt="Renewable energy simulation platform" /></span>
 											<div class="inner centered">
 												<p class="compact-title"><strong>Business Impact</strong></p>
@@ -992,6 +1024,7 @@ I’m a Data Scientist with an energy engineering background and 2+ years of pro
 													</div>
 												</div>
 												<div style="margin-top: 2em;">
+													<p style="color: #4acaa8; font-weight: 700; margin-bottom: 0.5em;">(in development)</p>
 													<p style="color: #000; font-weight: 600; margin-bottom: 1em;">Explore the remaining domains</p>
 													<ul class="actions" style="justify-content: center;">
 														<li><a href="#" class="button" onclick="document.querySelector('#two').scrollIntoView({behavior: 'smooth'}); document.querySelector('.proj-ni[data-cat=&quot;geospatial&quot;]').click(); return false;">Geospatial</a></li>
@@ -1493,6 +1526,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/main.js"></script>
 
 		<script>
+			// Category panel switching
 			document.querySelectorAll('.proj-ni').forEach(function(ni) {
 				ni.addEventListener('click', function() {
 					var cat = this.getAttribute('data-cat');
@@ -1502,6 +1536,54 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					var panel = document.querySelector('.proj-panel[data-cat="' + cat + '"]');
 					if (panel) panel.classList.add('active');
 				});
+			});
+
+			// Build horizontal project index for each panel
+			document.querySelectorAll('.proj-panel').forEach(function(panel) {
+				var features = panel.querySelector('.features');
+				if (!features) return;
+				var articles = features.querySelectorAll('article');
+				if (articles.length < 1) return;
+
+				var index = document.createElement('div');
+				index.className = 'proj-index';
+
+				var label = document.createElement('div');
+				label.className = 'proj-index-label';
+				label.textContent = 'Projects';
+				index.appendChild(label);
+
+				var list = document.createElement('ul');
+				list.className = 'proj-index-list';
+
+				articles.forEach(function(article, i) {
+					var titleEl = article.querySelector('.proj-title');
+					if (!titleEl) return;
+					article.id = 'proj-' + panel.dataset.cat + '-' + i;
+
+					var item = document.createElement('li');
+					var link = document.createElement('a');
+					link.className = 'proj-index-link';
+					link.href = '#';
+					link.title = titleEl.textContent.trim();
+					link.textContent = titleEl.textContent.trim();
+					link.addEventListener('click', function(e) {
+						e.preventDefault();
+						article.scrollIntoView({ behavior: 'smooth', block: 'start' });
+					});
+					item.appendChild(link);
+					list.appendChild(item);
+				});
+
+				index.appendChild(list);
+
+				// Insert after eyebrow if present, else before first article
+				var eyebrow = features.querySelector('.proj-all-eyebrow');
+				if (eyebrow) {
+					eyebrow.insertAdjacentElement('afterend', index);
+				} else {
+					features.insertBefore(index, articles[0]);
+				}
 			});
 		</script>
 	</body>
